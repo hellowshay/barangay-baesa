@@ -5,14 +5,14 @@ export default function MapSection() {
     <section id="map" className="bg-white px-5 py-20 sm:px-10 lg:px-16">
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
-          <h2 className="section-title">Barangay Map</h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-[#63756d]">Locate the Barangay Hall and other essential community landmarks in Barangay Baesa, Quezon City.</p>
+          <h2 className="section-title text-[#0F5235] text-5xl font-bold">Barangay Map</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-[#4B5F56]">Locate the Barangay Hall and other essential community landmarks in Barangay Baesa, Quezon City.</p>
         </div>
         <div className="mt-10 grid gap-8 lg:grid-cols-[400px_1fr]">
           <div className="space-y-5">
             <div className="rounded-3xl border border-[#d8e5dc] p-7">
-              <p className="eyebrow">BARANGAY HALL</p>
-              <h3 className="mt-4 text-2xl font-bold text-[#132e23]">Barangay Baesa</h3>
+              <p className="eyebrow text-[#23824F] font-bold">BARANGAY HALL</p>
+              <h3 className="mt-4 text-2xl font-bold text-[#0F2A20]">Barangay Baesa</h3>
               <div className="mt-6 space-y-5 text-sm text-[#52655c]">
                 <p className="flex gap-3"><MapPin className="text-[#208c51]" />Barangay Hall, Barangay Baesa<br />Quezon City, Metro Manila</p>
                 <p className="flex gap-3"><Clock3 className="text-[#208c51]" />Mon–Fri, 8:00 AM–5:00 PM<br />Lunch break 12:00 PM–1:00 PM</p>
@@ -25,11 +25,20 @@ export default function MapSection() {
               </div>
             </div>
             <div className="rounded-3xl border border-[#d8e5dc] p-7">
-              <p className="eyebrow">KEY LOCATIONS</p>
-              <ol className="mt-5 space-y-4 text-sm font-medium text-[#17382b]">
-                <li><b>1</b> Barangay Hall</li>
-                <li><b>2</b> Health Center (3rd Floor)</li>
-                <li><b>3</b> Barangay Baesa Plaza</li>
+              <p className="eyebrow text-[#23824F] font-bold tracking-wider text-xs">KEY LOCATIONS</p>
+              <ol className="mt-5 space-y-4 text-sm font-bold text-[#17382b]">
+                <li className="flex items-center gap-4">
+                  <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#E6F4EC] text-[#23824F]">1</span>
+                  <span>Barangay Hall</span>
+                </li>
+                <li className="flex items-center gap-4">
+                  <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#E6F4EC] text-[#23824F]">2</span>
+                  <span>Health Center (3rd Floor)</span>
+                </li>
+                <li className="flex items-center gap-4">
+                  <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#E6F4EC] text-[#23824F]">3</span>
+                  <span>Barangay Baesa Plaza</span>
+                </li>
               </ol>
             </div>
           </div>

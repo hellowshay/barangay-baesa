@@ -1,4 +1,4 @@
-import { ArrowRight, FileCheck2, HeartHandshake, Send, ShieldCheck, Store } from 'lucide-react'
+import { ArrowRight, FileCheck2, HeartHandshake, Send, ShieldCheck, Store, MapPinHouse } from 'lucide-react'
 
 const services = [
   { title: 'Barangay Clearance', description: 'Official proof of residency and good standing', icon: FileCheck2 },
@@ -7,6 +7,7 @@ const services = [
   { title: 'Barangay Business Permit', description: 'License for business operations in the barangay', icon: Store },
   { title: 'Barangay Indigency', description: 'Certifications for indigent residents', icon: HeartHandshake },
   { title: 'First-Time Job Seeker', description: 'Certificates for first-time job seekers', icon: Send },
+   { title: 'Barangay Residency', description: 'Proof of residency certificate  ', icon: MapPinHouse },
 ]
 
 export default function Services() {
@@ -14,8 +15,8 @@ export default function Services() {
     <section id="services" className="bg-white px-5 py-20 sm:px-10 lg:px-16">
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
-          <h2 className="section-title">Barangay Services</h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-[#63756d]">Request certificates and submit requirements at the Barangay Hall. Sign in to get started.</p>
+          <h2 className="section-title text-[#0F5235]  text-5xl font-bold" >Barangay Services</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-1xl text-[#4B5F56]">Request certificates and submit requirements at the Barangay Hall. Sign in to get started.</p>
         </div>
         <div className="mt-10 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
           {services.map(({ title, description, icon: Icon }) => (

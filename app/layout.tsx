@@ -1,10 +1,17 @@
-
-
 // Import ng mga TypeScript types mula sa Next.js para sa metadata at viewport configurations
 import type { Metadata, Viewport } from 'next'
 
+// Import ng Plus Jakarta Sans mula sa Google fonts
+import { Plus_Jakarta_Sans } from 'next/font/google'
+
 // Import ng global CSS styles ng iyong proyekto
 import './globals.css'
+
+// I-configure ang Plus Jakarta Sans font
+const jakarta = Plus_Jakarta_Sans({ 
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+})
 
 // Pagtatakda ng metadata ng website (SEO, title, description, at mga favicon/app icons)
 export const metadata: Metadata = {
@@ -47,10 +54,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      {/* Idinagdag ang jakarta.className sa body para magamit sa buong website */}
+      <body className={`${jakarta.className} antialiased`}>
         {/* Ang mga pahina o sub-components ng website */}
         {children}
-        
       </body>
     </html>
   )

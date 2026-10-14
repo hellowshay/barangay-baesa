@@ -30,19 +30,19 @@ export default function Hero() {
           
           {/* Left Side: Text Content */}
           <div className="z-10">
-            <p className="mb-6 text-sm font-medium text-[#08753d]">● &nbsp;Quezon City · District VI</p>
+            <p className="mb-6 text-sm font-medium text-[#0E6E3B]">● &nbsp;Quezon City · District VI</p>
             <h1 className="max-w-xl text-5xl font-bold leading-[0.98] tracking-tight text-[#075538] sm:text-7xl">
               Welcome to <span className="text-[#258c52]">Barangay Baesa</span>
             </h1>
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-[#46645d]">
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-[#345853]">
               Your trusted partner for community services and development — request certificates, permits and health services online, anytime.
             </p>
           </div>
 
      
-{/* Right Side: Larger Image Container */}
-<div className="relative w-full z-20 lg:-mr-32 lg:w-[160%]">
-  <div className="relative overflow-hidden right-58 ">
+{/* Right Side: Larger Image Container (Hidden sa Mobile eung img ) */}
+<div className="relative w-full z-20 hidden lg:block lg:-mr-32 lg:w-[160%]">
+  <div className="relative overflow-hidden right-58">
     <img 
       src="/baesa 4.png" 
       alt="Barangay Baesa" 
