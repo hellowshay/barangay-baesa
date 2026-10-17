@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Phone, Menu, X } from 'lucide-react'
+import Link from 'next/link'
 
 const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
   e.preventDefault()
@@ -23,6 +24,7 @@ export default function Header() {
   const links = [
     ['Home', 'home'],
     ['About Us', 'about'],
+    ['Government', 'government'],
     ['Services', 'services'],
     ['News & Events', 'news'],
     ['Map', 'map'],
@@ -35,7 +37,7 @@ export default function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3">
           <span>The Official Website of Barangay Baesa E-Services</span>
           <div className="hidden items-center gap-6 sm:flex">
-            <span className="flex items-center gap-2"><b className="text-sm">f</b> Facebook</span> {/* wala pang official fb page na sinend */}
+            <span className="flex items-center gap-2"><b className="text-sm">f</b> Facebook</span>
             <span className="flex items-center gap-2"><Phone size={13} /> Hotline: 0962–7150979</span>
           </div>
         </div>
@@ -66,9 +68,13 @@ export default function Header() {
                 {label}
               </a>
             ))}
-            <a href="#signin" className="ml-4 rounded-xl bg-[#075538] px-6 py-3 font-semibold text-white transition hover:bg-[#043f29]">
+            {/* Dito natin inayos para dumiretso sa /login page */}
+            <Link 
+              href="/login" 
+              className="ml-4 rounded-xl bg-[#075538] px-6 py-3 font-semibold text-white transition hover:bg-[#043f29]"
+            >
               Sign In
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -85,7 +91,10 @@ export default function Header() {
                 {label}
               </a>
             ))}
-            <a href="#signin" className="rounded-lg bg-[#075538] px-3 py-2 text-white font-medium">Sign In</a>
+            {/* Mobile Sign In button link papuntang /login */}
+            <Link href="/login" className="rounded-lg bg-[#075538] px-3 py-2 text-white font-medium text-center">
+              Sign In
+            </Link>
           </nav>
         )}
       </div>
