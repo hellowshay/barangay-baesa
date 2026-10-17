@@ -47,8 +47,8 @@ export default function Header() {
       <div className="bg-[#d1f4d9] px-5 py-4 sm:px-10 lg:px-16">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <a href="#home" onClick={(e) => scrollToSection(e, 'home')} className="flex items-center gap-3 text-[#075b3c]">
-            <div className="grid size-11 place-items-center rounded-full border-2 border-[#075b3c] bg-white text-xl">
-              <img src="baesa-logo.png" alt="Barangay Baesa Logo" />
+            <div className="grid size-11 place-items-center rounded-full border-2 border-[#075b3c] bg-white text-xl overflow-hidden">
+              <img src="/baesa-logo.png" alt="Barangay Baesa Logo" className="w-full h-full object-cover" />
             </div>
             <div>
               <strong className="block text-base leading-tight sm:text-lg">BARANGAY BAESA</strong>
@@ -68,7 +68,8 @@ export default function Header() {
                 {label}
               </a>
             ))}
-            {/* Dito natin inayos para dumiretso sa /login page */}
+            
+            {/* Desktop Sign In Link */}
             <Link 
               href="/login" 
               className="ml-4 rounded-xl bg-[#075538] px-6 py-3 font-semibold text-white transition hover:bg-[#043f29]"
@@ -91,8 +92,13 @@ export default function Header() {
                 {label}
               </a>
             ))}
-            {/* Mobile Sign In button link papuntang /login */}
-            <Link href="/login" className="rounded-lg bg-[#075538] px-3 py-2 text-white font-medium text-center">
+            
+            {/* Mobile Sign In Link */}
+            <Link 
+              href="/login" 
+              onClick={() => setOpen(false)}
+              className="rounded-lg bg-[#075538] px-3 py-3 text-white font-medium text-center shadow-sm"
+            >
               Sign In
             </Link>
           </nav>
