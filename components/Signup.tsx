@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Upload, Eye, EyeOff } from 'lucide-react'
 
-export function Signup({ onLogin }: { onLogin: () => void }) {
+export default function Signup({ onLogin }: { onLogin: () => void })  {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [fileName, setFileName] = useState('Choose file to upload (Valid ID)')
